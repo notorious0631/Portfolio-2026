@@ -1,0 +1,110 @@
+.section {
+    padding: var(--spacing-3xl) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--spacing-3xl);
+}
+
+.leftColumn {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sectionTitle {
+    font-family: var(--font-body);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.rightColumn {
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--spacing-3xl);
+    row-gap: var(--spacing-3xl);
+}
+
+.cardLink {
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cardLink:hover {
+    opacity: 0.7;
+    transform: translateY(-4px);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.card:hover {
+    /* Removed transform from card since it's now on link */
+}
+
+.date {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-body);
+}
+
+.role {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-xs);
+}
+
+.company {
+    font-size: 0.9375rem;
+    color: #8b7cff;
+    font-family: var(--font-body);
+}
+
+.details {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    margin-top: -4px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .sectionTitle {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}

@@ -1,0 +1,145 @@
+.main {
+    padding-top: 140px;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    padding-bottom: var(--spacing-3xl);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.header {
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.projectLink:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-2xl) 0;
+    transition: padding 0.3s ease;
+}
+
+.projectLink:hover .row {
+    padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.leftCol {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-2xl);
+}
+
+.id {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.projectName {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.projectLink:hover .projectName {
+    transform: translateX(10px);
+}
+
+.rightCol {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.categoryTag {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.year {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.arrow {
+    color: var(--text-primary);
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: all 0.3s ease;
+}
+
+.projectLink:hover .arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .leftCol {
+        gap: var(--spacing-md);
+    }
+
+    .projectName {
+        font-size: 1.75rem;
+    }
+
+    .rightCol {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .arrow {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

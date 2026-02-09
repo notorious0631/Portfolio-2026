@@ -1,0 +1,166 @@
+.main {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: var(--bg-primary);
+}
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xl);
+    transition: color 0.2s ease;
+}
+
+.backLink:hover {
+    color: var(--accent-green);
+}
+
+.headerContent {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.projectIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    color: var(--bg-primary);
+    flex-shrink: 0;
+}
+
+.projectInfo {
+    flex: 1;
+}
+
+.title {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.separator {
+    opacity: 0.5;
+}
+
+.category {
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.githubBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.githubBtn:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.sectionTitle::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--accent-green);
+    border-radius: 2px;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    white-space: pre-line;
+}
+
+.techGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.techTag {
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.techTag:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .headerContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .meta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,204 @@
+.main {
+    padding-top: 120px;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    padding-bottom: var(--spacing-3xl);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.profileHeader {
+    display: flex;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-3xl);
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.headerInfo {
+    flex: 1;
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.role {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-body);
+}
+
+.bio {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.resumeLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.resumeLink:hover {
+    background: var(--bg-secondary);
+    border-color: var(--text-primary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+}
+
+.sectionTitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+}
+
+/* Skills */
+.skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.skillTag {
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.skillTag:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.toolsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.toolTag {
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    border-left: 1px solid var(--border-color);
+    padding-left: var(--spacing-xl);
+}
+
+.timelineItem {
+    position: relative;
+}
+
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--spacing-xl) * -1 - 5px);
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    background: var(--bg-primary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 50%;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.timelineRole {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.timelineCompany {
+    font-size: 0.875rem;
+    color: #8b7cff;
+    margin-bottom: var(--spacing-xs);
+}
+
+.description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profileHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .timelineItem::before {
+        display: none;
+    }
+}

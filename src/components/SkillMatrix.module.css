@@ -1,0 +1,174 @@
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 40px rgba(0, 255, 157, 0.1);
+}
+
+.header {
+    margin-bottom: var(--spacing-md);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Skill List with Progress Bars */
+.skillList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skillItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skillInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillName {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.skillScore {
+    font-size: 0.8rem;
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.progressBar {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+    border-radius: var(--radius-full);
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+}
+
+.progressFill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.progressFill.purple {
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+}
+
+/* Tool Grid */
+.toolList {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.toolHeader {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.toolGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.toolItem {
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.toolItem:hover {
+    border-color: var(--accent-green);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Matrix Visual */
+.matrixVisual {
+    display: flex;
+    gap: 2px;
+    height: 60px;
+    align-items: flex-end;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.bar {
+    flex: 1;
+    background: var(--bg-secondary);
+    border-radius: 2px 2px 0 0;
+    transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: var(--spacing-md);
+    }
+}
