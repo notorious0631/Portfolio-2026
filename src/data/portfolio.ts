@@ -181,5 +181,42 @@ Key Features:
             image: "/projects/movie-recommender-preview.png",
             github: "https://github.com/notorious0631"
         }
+    ],
+    education: [
+        {
+            id: 'kaziranga-university',
+            date: '2021 - 2025',
+            degree: 'Bachelor of Technology',
+            field: 'Computer Science Engineering',
+            institution: 'The Assam Kaziranga University',
+            details: {
+                role: "Student",
+                longDescription: "Pursuing a comprehensive curriculum in Computer Science, focusing on algorithms, data structures, and software engineering principles.",
+                technologies: ["C++", "Java", "Data Structures", "Algorithms"],
+                achievements: [
+                    "Consistent academic performance",
+                    "Active participant in coding clubs",
+                    "Lead several technical projects"
+                ],
+                images: []
+            }
+        },
+        {
+            id: 'kendriya-vidyalaya',
+            date: '2019 - 2021',
+            degree: 'Higher Secondary',
+            field: 'Science',
+            institution: 'Kendriya Vidyalaya',
+            details: {
+                role: "Student",
+                longDescription: "Completed Higher Secondary education with a focus on Physics, Chemistry, and Mathematics.",
+                technologies: ["Physics", "Chemistry", "Mathematics"],
+                achievements: [
+                    "Excelled in science subjects",
+                    "Participated in science exhibitions"
+                ],
+                images: []
+            }
+        }
     ]
 };
