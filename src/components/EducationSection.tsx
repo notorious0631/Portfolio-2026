@@ -4,23 +4,10 @@ import { motion } from 'framer-motion';
 import styles from './EducationSection.module.css';
 import Link from 'next/link';
 
+import { portfolioData } from '@/data/portfolio';
+
 export default function EducationSection() {
-    const education = [
-        {
-            id: 'kaziranga-university',
-            date: '2021 - 2025',
-            degree: 'Bachelor of Technology',
-            field: 'Computer Science Engineering',
-            institution: 'The Assam Kaziranga University'
-        },
-        {
-            id: 'kendriya-vidyalaya',
-            date: '2019 - 2021',
-            degree: 'Higher Secondary',
-            field: 'Science',
-            institution: 'Kendriya Vidyalaya'
-        }
-    ];
+    const { education } = portfolioData;
 
     return (
         <section className={styles.section}>

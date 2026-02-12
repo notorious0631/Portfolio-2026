@@ -31,8 +31,7 @@ const TypingText = ({ text }: { text: string }) => {
 export default function Hero() {
     const { personal, experience } = portfolioData;
 
-    // Calculate years of experience
-    const yearsExp = experience.length;
+
 
     return (
         <section className={styles.hero}>
@@ -87,8 +86,7 @@ export default function Hero() {
                     <div className={styles.avatarBadge}>
                         <div className={styles.avatar}>B</div>
                     </div>
-                    <div className={styles.badge}>{yearsExp}+ Years Exp</div>
-                    <div className={styles.dotIndicator}></div>
+
                 </motion.div>
             </div>
 

@@ -11,72 +11,150 @@
     padding: 0 var(--spacing-lg);
 }
 
+.coverImage {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: -75px;
+    opacity: 0.6;
+}
+
 .profileHeader {
     display: flex;
-    gap: var(--spacing-2xl);
+    flex-direction: column;
+    /* Stack avatar and info */
     margin-bottom: var(--spacing-3xl);
-    align-items: flex-start;
+    padding: 0 40px;
+    position: relative;
+}
+
+.avatarWrapper {
+    margin-top: -100px;
+    /* Pull avatar up to overlap cover */
+    margin-bottom: 16px;
+    position: relative;
+    width: fit-content;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 168px;
+    /* Slightly larger like reference */
+    height: 168px;
     border-radius: 50%;
-    background: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    color: var(--text-primary);
+    border: 4px solid var(--bg-primary);
+    position: relative;
+    overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Subtler shadow */
+    background: var(--bg-primary);
 }
 
 .headerInfo {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .name {
     font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 400;
-    color: var(--text-primary);
-    line-height: 1.1;
-    margin-bottom: var(--spacing-xs);
+    font-size: 2.5rem;
+    /* Adjusted size */
+    font-weight: 600;
+    /* Bolder */
+    color: #ffffff;
+    /* White color */
+    /* Black color */
+    line-height: 1.2;
+    margin: 0;
 }
 
-.role {
-    font-size: 1.25rem;
+.verifiedBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.pronouns {
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
-    font-family: var(--font-body);
+    margin-left: 4px;
+    font-weight: 400;
 }
 
-.bio {
-    font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    max-width: 600px;
-    margin-bottom: var(--spacing-lg);
+.headline {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin: 0;
+    font-weight: 400;
 }
 
-.resumeLink {
+.location {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 4px 0 16px 0;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.socialButton {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    padding: 10px 20px;
+    gap: 8px;
+    padding: 8px 16px;
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-full);
+    border-radius: 24px;
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background: var(--bg-secondary);
 }
 
-.resumeLink:hover {
-    background: var(--bg-secondary);
+.socialButton:hover {
+    background: var(--bg-hover);
     border-color: var(--text-primary);
+    transform: translateY(-2px);
 }
+
+.primaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    background-color: #0a66c2;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border: 1px solid #0a66c2;
+}
+
+.primaryButton:hover {
+    background-color: #004182;
+    border-color: #004182;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+
 
 .grid {
     display: grid;

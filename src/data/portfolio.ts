@@ -7,6 +7,17 @@ export const portfolioData = {
         terminalText: "let developer = user.current(); > The terminal is open. Type nothing. Just explore.",
         email: "Bhaskar.sep2003@gmail.com", // Placeholder or inferred
         location: "Guwahati, Assam",
+        photos: [
+            "/internships/nit-group.jpg",
+            "/internships/nit-selfie.jpg",
+            "/internships/nit-arduino.jpg",
+            "/profile.png"
+        ],
+        coverImage: "/cover.jpeg",
+        profileImage: "/profile.jpg",
+        linkedin: "https://www.linkedin.com/in/bhaskar-das-0631/",
+        github: "https://github.com/notorious0631",
+        resume: "https://drive.google.com/file/d/1pCWPbaEl5arn6AwxKsccQbUUfbON_sX5/view?usp=sharing"
     },
     stats: {
         timeSpent: "14,238", // Placeholder
@@ -85,7 +96,7 @@ This experience has been instrumental in shaping my technical and professional j
                     "Reduced API latency by 40% through query optimization",
                     "Implemented secure authentication system"
                 ],
-                images: ["/internships/gratia-1.jpg", "/internships/gratia-2.jpg"]
+                images: ["/internships/gratia-cert.jpeg"]
             }
         },
         {
@@ -105,7 +116,12 @@ This experience has been instrumental in shaping my technical and professional j
                     "Created a user-friendly GUI using Java Swing",
                     "Implemented rigorous input validation and error handling"
                 ],
-                images: ["/internships/railway-1.jpg", "/internships/railway-2.jpg"]
+                images: [
+                    "/internships/railway-1.jpg",
+                    "/internships/railway2.jpg",
+                    "/internships/railway-3.jpg",
+                    "/internships/railway-4.png"
+                ]
             }
         }
     ],
@@ -185,7 +201,7 @@ Key Features:
     education: [
         {
             id: 'kaziranga-university',
-            date: '2021 - 2025',
+            date: '2022 - 2026',
             degree: 'Bachelor of Technology',
             field: 'Computer Science Engineering',
             institution: 'The Assam Kaziranga University',
@@ -203,10 +219,10 @@ Key Features:
         },
         {
             id: 'kendriya-vidyalaya',
-            date: '2019 - 2021',
+            date: '2010-2022',
             degree: 'Higher Secondary',
             field: 'Science',
-            institution: 'Kendriya Vidyalaya',
+            institution: 'Kendriya Vidyalaya Maligaon',
             details: {
                 role: "Student",
                 longDescription: "Completed Higher Secondary education with a focus on Physics, Chemistry, and Mathematics.",

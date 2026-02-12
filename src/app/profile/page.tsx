@@ -3,8 +3,10 @@
 import Header from '@/components/Header';
 import styles from './page.module.css';
 import { portfolioData } from '@/data/portfolio';
-import { Calendar, Download } from 'lucide-react';
+import { CheckCircle, Linkedin, Github, FileText } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 export default function Profile() {
     const { personal, skills, experience, education } = portfolioData;
@@ -14,27 +16,82 @@ export default function Profile() {
             <Header />
             <main className={styles.main}>
                 <div className={styles.container}>
+                    {/* Cover Image */}
+                    {personal.coverImage && (
+                        <div className={styles.coverImage}>
+                            <Image
+                                src={personal.coverImage}
+                                alt="Cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                            />
+                        </div>
+                    )}
+
                     {/* Header Section */}
                     <div className={styles.profileHeader}>
-                        <div className={styles.avatar}>
-                            {personal.name.charAt(0)}
+                        <div className={styles.avatarWrapper}>
+                            <div className={styles.avatar}>
+                                <Image
+                                    src={personal.profileImage}
+                                    alt={personal.name}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    priority
+                                />
+                            </div>
                         </div>
+
                         <div className={styles.headerInfo}>
-                            <h1 className={styles.name}>{personal.name}</h1>
-                            <p className={styles.role}>{personal.role}</p>
-                            <p className={styles.bio}>
-                                Computer Science Engineer passionate about building intelligent systems.
-                                Specialized in AI/ML, Data Analytics, and Full Stack Development.
-                                Based in {personal.location}.
+                            <div className={styles.nameRow}>
+                                <h1 className={styles.name}>{personal.name}</h1>
+                                <div className={styles.verifiedBadge}>
+                                    <CheckCircle size={16} fill="#0a66c2" color="white" />
+                                </div>
+                                <span className={styles.pronouns}>(He/Him)</span>
+                            </div>
+
+                            <p className={styles.headline}>
+                                Ku2022 • CSE • AI/ML • GenAI • LLMs
                             </p>
-                            <Link
-                                href="https://drive.google.com/file/d/1pCWPbaEl5arn6AwxKsccQbUUfbON_sX5/view?usp=sharing"
-                                target="_blank"
-                                className={styles.resumeLink}
-                            >
-                                <Download size={16} />
-                                Download Resume
-                            </Link>
+
+                            <p className={styles.location}>
+                                {personal.location}
+                            </p>
+
+                            <div className={styles.socialLinks}>
+                                {personal.linkedin && (
+                                    <Link
+                                        href={personal.linkedin}
+                                        target="_blank"
+                                        className={styles.socialButton}
+                                    >
+                                        <Linkedin size={20} />
+                                        LinkedIn
+                                    </Link>
+                                )}
+                                {personal.github && (
+                                    <Link
+                                        href={personal.github}
+                                        target="_blank"
+                                        className={styles.socialButton}
+                                    >
+                                        <Github size={20} />
+                                        GitHub
+                                    </Link>
+                                )}
+                                {personal.resume && (
+                                    <Link
+                                        href={personal.resume}
+                                        target="_blank"
+                                        className={styles.primaryButton}
+                                    >
+                                        <FileText size={20} />
+                                        Resume
+                                    </Link>
+                                )}
+                            </div>
                         </div>
                     </div>
 
@@ -71,6 +128,8 @@ export default function Profile() {
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </main>
         </>

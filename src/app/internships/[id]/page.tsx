@@ -133,7 +133,10 @@ export default function InternshipDetail({ params }: { params: Promise<{ id: str
                                         src={img}
                                         alt={`Internship Screenshot ${index + 1}`}
                                         fill
-                                        style={{ objectFit: 'cover' }}
+                                        style={{ objectFit: 'contain', padding: '10px' }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        quality={100}
+                                        priority={index < 2}
                                     />
                                 </div>
                             </motion.div>
@@ -158,6 +161,8 @@ export default function InternshipDetail({ params }: { params: Promise<{ id: str
                                 alt="Full size"
                                 fill
                                 style={{ objectFit: 'contain' }}
+                                quality={100}
+                                sizes="100vw"
                             />
                         </div>
                     </div>

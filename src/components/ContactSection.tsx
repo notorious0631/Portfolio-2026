@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from './ContactSection.module.css';
 import Link from 'next/link';
+import { portfolioData } from '@/data/portfolio';
 
 export default function ContactSection() {
     const [time, setTime] = useState('');
@@ -63,7 +64,7 @@ export default function ContactSection() {
                 <div className={styles.socials}>
                     <Link href="https://linkedin.com/in/bhaskar-das" target="_blank" className={styles.socialBtn}>LinkedIn</Link>
                     <Link href="https://github.com/notorious0631" target="_blank" className={styles.socialBtn}>GitHub</Link>
-                    <Link href="https://instagram.com" target="_blank" className={styles.socialBtn}>Instagram</Link>
+                    <Link href={portfolioData.personal.resume} target="_blank" className={styles.socialBtn}>Resume</Link>
                 </div>
 
                 <div className={styles.time}>{time}</div>
